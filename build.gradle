@@ -1,0 +1,30 @@
+buildscript {
+	repositories {
+		mavenCentral()
+		mavenLocal()
+	}
+}
+
+plugins {
+	id 'com.github.ben-manes.versions' version '0.38.0'
+}
+
+version = '0.0.1'
+
+allprojects {
+	repositories {
+		mavenCentral()
+		mavenLocal()
+	}
+}
+
+subprojects {
+	pluginManager.withPlugin('java') {
+		sourceCompatibility = 17
+		targetCompatibility = 17
+	}
+}
+
+wrapper {
+	gradleVersion = '7.3'
+}
